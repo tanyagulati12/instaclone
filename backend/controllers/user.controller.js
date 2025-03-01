@@ -6,6 +6,7 @@ import cloudinary from "../utils/cloudinary.js";
 import { Post } from "../models/post.model.js";
 export const register = async (req, res) => {
     try {
+        console.log("Got a request for register");
         const { username, email, password } = req.body;
         if (!username || !email || !password) {
             return res.status(401).json({
